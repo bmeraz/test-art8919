@@ -1,0 +1,18 @@
+<p>
+  <b>Artifact:</b>
+  <%=h @media.artifact_id %>
+</p>
+
+<p>
+  <b>Media name:</b>
+  <%=h @media.media_name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @media.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_media_path(@media) %> |
+<%= link_to 'Back', medias_path %>

@@ -1,0 +1,7 @@
+<% div_for @artifacts do %>
+<h2><%= link_to_unless_current h(@artifact.title), @artifact %></h2>
+<%= simple_format h(@artifact.artist) %>
+<%= simple_format h(@artifact.description) %>
+<%= simple_format h(@artifact.year) %>
+<%= simple_format h(@artifact.description) %>
+<% end %>

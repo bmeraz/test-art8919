@@ -1,0 +1,26 @@
+<h1>Listing media_attributes</h1>
+
+<table>
+  <tr>
+    <th>Media</th>
+    <th>Attr name</th>
+    <th>Attr desc</th>
+    <th>Media value</th>
+  </tr>
+
+<% @media_attributes.each do |media_attribute| %>
+  <tr>
+    <td><%=h media_attribute.media_id %></td>
+    <td><%=h media_attribute.attr_name %></td>
+    <td><%=h media_attribute.attr_desc %></td>
+    <td><%=h media_attribute.media_value %></td>
+    <td><%= link_to 'Show', media_attribute %></td>
+    <td><%= link_to 'Edit', edit_media_attribute_path(media_attribute) %></td>
+    <td><%= link_to 'Destroy', media_attribute, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New media_attribute', new_media_attribute_path %>

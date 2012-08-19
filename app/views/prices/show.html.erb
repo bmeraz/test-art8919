@@ -1,0 +1,23 @@
+<p>
+  <b>Artifact:</b>
+  <%=h @price.artifact_id %>
+</p>
+
+<p>
+  <b>Price type:</b>
+  <%=h @price.price_type %>
+</p>
+
+<p>
+  <b>Price description:</b>
+  <%=h @price.price_description %>
+</p>
+
+<p>
+  <b>Price value:</b>
+  <%=h @price.price_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_price_path(@price) %> |
+<%= link_to 'Back', prices_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  artifact_id: 1
+  price_type: MyString
+  price_description: MyText
+  price_value: MyString
+
+two:
+  artifact_id: 1
+  price_type: MyString
+  price_description: MyText
+  price_value: MyString

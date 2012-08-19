@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  media_id: 1
+  attr_name: MyString
+  attr_desc: MyText
+  media_value: MyString
+
+two:
+  media_id: 1
+  attr_name: MyString
+  attr_desc: MyText
+  media_value: MyString

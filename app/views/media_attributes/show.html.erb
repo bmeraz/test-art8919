@@ -1,0 +1,23 @@
+<p>
+  <b>Media:</b>
+  <%=h @media_attribute.media_id %>
+</p>
+
+<p>
+  <b>Attr name:</b>
+  <%=h @media_attribute.attr_name %>
+</p>
+
+<p>
+  <b>Attr desc:</b>
+  <%=h @media_attribute.attr_desc %>
+</p>
+
+<p>
+  <b>Media value:</b>
+  <%=h @media_attribute.media_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_media_attribute_path(@media_attribute) %> |
+<%= link_to 'Back', media_attributes_path %>

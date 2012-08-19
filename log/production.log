@@ -1,0 +1,89 @@
+
+
+Processing ApplicationController#index (for 192.168.1.53 at 2012-08-18 00:29:17) [GET]
+
+ActionController::RoutingError (No route matches "/railsapp" with {:method=>:get}):
+  passenger (2.2.14) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.14) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.14) lib/phusion_passenger/railz/application_spawner.rb:441:in `start_request_handler'
+  passenger (2.2.14) lib/phusion_passenger/railz/application_spawner.rb:381:in `handle_spawn_application'
+  passenger (2.2.14) lib/phusion_passenger/utils.rb:252:in `safe_fork'
+  passenger (2.2.14) lib/phusion_passenger/railz/application_spawner.rb:377:in `handle_spawn_application'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.14) lib/phusion_passenger/railz/application_spawner.rb:222:in `start'
+  passenger (2.2.14) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.14) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.14) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.14) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.14) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering /var/www/railsapp/public/404.html (404 Not Found)
+
+
+Processing ApplicationController#index (for 192.168.1.53 at 2012-08-18 00:29:22) [GET]
+
+ActionController::RoutingError (No route matches "/railsapp/artists" with {:method=>:get}):
+  passenger (2.2.14) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.14) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.14) lib/phusion_passenger/railz/application_spawner.rb:441:in `start_request_handler'
+  passenger (2.2.14) lib/phusion_passenger/railz/application_spawner.rb:381:in `handle_spawn_application'
+  passenger (2.2.14) lib/phusion_passenger/utils.rb:252:in `safe_fork'
+  passenger (2.2.14) lib/phusion_passenger/railz/application_spawner.rb:377:in `handle_spawn_application'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.14) lib/phusion_passenger/railz/application_spawner.rb:222:in `start'
+  passenger (2.2.14) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.14) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.14) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.14) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.14) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.14) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendering /var/www/railsapp/public/404.html (404 Not Found)
+
+
+Processing ArtistsController#index (for 192.168.1.53 at 2012-08-18 00:29:38) [GET]
+Rendering template within layouts/artists
+Rendering artists/index
+Completed in 100ms (View: 10, DB: 73) | 200 OK [http://192.168.1.60/artists]
+
+
+Processing ArtistsController#new (for 192.168.1.53 at 2012-08-18 00:29:45) [GET]
+Rendering template within layouts/artists
+Rendering artists/new
+Completed in 20ms (View: 13, DB: 4) | 200 OK [http://192.168.1.60/artists/new]
+
+
+Processing ArtistsController#create (for 192.168.1.53 at 2012-08-18 00:29:51) [POST]
+  Parameters: {"artist"=>{"lname"=>"Cassill", "fname"=>"Kay"}, "commit"=>"Create", "authenticity_token"=>"f6hL2WHlyBndKik5AcoEEvijRJgnUUPbSewbpREVkjg="}
+Redirected to http://192.168.1.60/artists/1
+Completed in 140ms (DB: 135) | 302 Found [http://192.168.1.60/artists]
+
+
+Processing ArtistsController#show (for 192.168.1.53 at 2012-08-18 00:29:51) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/artists
+Rendering artists/show
+Completed in 32ms (View: 2, DB: 28) | 200 OK [http://192.168.1.60/artists/1]
+
+
+Processing ArtistsController#index (for 192.168.1.53 at 2012-08-18 00:29:53) [GET]
+Rendering template within layouts/artists
+Rendering artists/index
+Completed in 10ms (View: 5, DB: 3) | 200 OK [http://192.168.1.60/artists]

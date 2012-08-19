@@ -1,0 +1,232 @@
+//style.css
+
+/* styles from scaffold */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* end of scaffold style */
+
+/* pallette color list analogic http://www.colorschemedesigner.com/#3351Hw0w0w0w0
+Type    Standard    Muted   Dark    Bright  Pale
+Greens  00af64      218359  007241  36d792  61d7a4
+2nd A   03899c      1f6b75  015965  36bbce  5fc0ce
+2nd B   1dd300      389e28  138900  52e93a  7ae969
+
+primaries: (greens)
+00af64 = standard
+218359 = muted
+007241 = dark
+36d792 = bright
+61d7a4 = pale
+
+secondary a (blues):
+03899c = standard
+1f6b75 = muted
+015965 = dark
+36bbce = bright
+5fc0ce = pale
+
+secondary b (greens):
+1dd300 = standard
+389e28 = muted
+138900 = dark
+52e93a = bright
+7ae969 = pale
+
+*/
+/* main content */
+body {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   18px;
+  line-height: 22px;
+  background-color: #61d7a4;
+  margin: 1em;
+}
+p {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   18px;
+  line-height: 22px;
+}
+
+ul,ol {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   18px;
+  line-height: 22px;
+}
+a { color: #000; }
+a:visited { color: #00f; }
+a:hover { color: #fff; background-color:#000; }
+
+td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   18px;
+  line-height: 22px;
+}
+
+th {
+  font-size: 19px;
+  font-weight: bold;
+  text-align: left;
+  border-bottom-style:solid;
+  margin:10px;
+}
+table{
+  width:64%;
+}
+
+
+/*
+*/
+#content{
+  background-color: #fff;
+  color: #000;
+  padding: 3em;
+  
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   16px;
+  line-height: 18px;
+}
+#offers{
+  horizontal-align: center;
+  background-color: #fff;
+}
+#round_button{
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  -webkit-box-shadow: 1px 2px 3px #007241;
+  -moz-box-shadow: 1px 2px 3px #007241;
+  box-shadow: 1px 2px 3px #007241;
+  background-color: #fff;
+  color: #000;
+  /* 
+  text-shadow: 2px 3px 2px #d42fce; 
+  filter: dropshadow(color=#d42fce, offx=2, offy=3);
+  */
+  margin: 2px;
+  text-align: center;
+  width: 180px;  
+}
+.offer_box{
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  background-color: #7ae969;
+  
+  margin: 15px;
+  color: #000;
+  border: 1px;
+  padding: 1em;
+  width: 25%;
+  float:left;
+  font-size: 20px;
+  line-height: 25px;
+  position:relative;
+  top: -15px;
+  
+}
+
+#econo_plan{
+  font-size: 22px;
+  line-height: 30px;
+  top:-25px;
+}
+#enterprise_plan{
+}
+#mini_plan{
+}
+
+#pitch_text{
+  font-size: 16px;
+  line-height: 30px;
+  align:left;
+  clear:left;
+  
+}
+
+/* rule layout */
+.rule_block{
+  border: solid black 1px;
+  width:80%;
+}
+.rule_block table{
+  width:80%;
+}
+.conditions_block, .actions_block{
+  margin: 2em;  
+}
+.rule_controls{    /* hide/show/copy/new indicator */
+    float:right;
+    margin:1em;
+    /* etc */
+}
+
+/* navigation */
+#main_nav{
+  background: #00af64; /* c9de96 old browsers */
+  background: -moz-linear-gradient(top, #00af64 0%, #007241 77%, #218359 100%); /* c9de96 8ab66b 398235 firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00af64), color-stop(77%,#007241), color-stop(100%,#218359)); /*c9de96 8ab66b 398235  webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00af64', endColorstr='#218359', GradientType=0 ); /* c9de96 8ab66b 398235 ie */
+  padding: 1em;
+}
+
+#user_nav{ /* login stuff */
+    float:right;
+    /* etc */
+}
+
+#np_nav{    /* next-prev indicator */
+    float:right;
+    /* etc */
+}
+#edit_nav{    /* next-prev indicator */
+    float:right;
+    font-size:12px;
+    /* etc */
+}
+
+

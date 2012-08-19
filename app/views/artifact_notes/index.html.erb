@@ -1,0 +1,22 @@
+<h1>Listing artifact_notes</h1>
+
+<table>
+  <tr>
+    <th>Ts</th>
+    <th>Note</th>
+  </tr>
+
+<% @artifact_notes.each do |artifact_note| %>
+  <tr>
+    <td><%=h artifact_note.ts %></td>
+    <td><%=h artifact_note.note %></td>
+    <td><%= link_to 'Show', artifact_note %></td>
+    <td><%= link_to 'Edit', edit_artifact_note_path(artifact_note) %></td>
+    <td><%= link_to 'Destroy', artifact_note, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New artifact_note', new_artifact_note_path %>

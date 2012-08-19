@@ -1,0 +1,2 @@
+module MediaAttributesHelper
+end

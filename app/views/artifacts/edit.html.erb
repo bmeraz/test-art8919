@@ -1,0 +1,40 @@
+<h1>Editing artifact</h1>
+
+<% form_for(@artifact) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :year %><br />
+    <%= f.text_field :year %>
+  </p>
+  <p>
+    <%= f.label :artist_id %><br />
+    <%= f.text_field :artist_id %>
+  </p>
+  <p>
+    <%= f.label :medium_id %><br />
+    <%= f.text_field :medium_id %>
+  </p>
+  <p>
+    <%= f.label :notes_id %><br />
+    <%= f.text_field :notes_id %>
+  </p>
+  <p>
+    <%= f.label :tag_id %><br />
+    <%= f.text_field :tag_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @artifact %> |
+<%= link_to 'Back', artifacts_path %>

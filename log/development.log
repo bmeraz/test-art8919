@@ -1,0 +1,280 @@
+  [4;36;1mSQL (52.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (56.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (25.4ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateArtists (20120817194943)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "fname" varchar(255), "lname" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120817194943')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("artists")[0m
+
+
+Processing ApplicationController#index (for 192.168.1.53 at 2012-08-17 19:52:10) [GET]
+
+ActionController::RoutingError (No route matches "/artist" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArtistsController#index (for 192.168.1.53 at 2012-08-17 19:52:27) [GET]
+  [4;36;1mArtist Load (1.9ms)[0m   [0;1mSELECT * FROM "artists" [0m
+Rendering template within layouts/artists
+Rendering artists/index
+Completed in 40ms (View: 29, DB: 2) | 200 OK [http://192.168.1.60/artists]
+
+
+Processing ArtistsController#new (for 192.168.1.53 at 2012-08-17 19:52:30) [GET]
+Rendering template within layouts/artists
+Rendering artists/new
+Completed in 27ms (View: 20, DB: 0) | 200 OK [http://192.168.1.60/artists/new]
+
+
+Processing ArtistsController#create (for 192.168.1.53 at 2012-08-17 19:52:36) [POST]
+  Parameters: {"artist"=>{"lname"=>"Cassill", "fname"=>"Kay"}, "commit"=>"Create", "authenticity_token"=>"f6hL2WHlyBndKik5AcoEEvijRJgnUUPbSewbpREVkjg="}
+  [4;35;1mArtist Create (0.7ms)[0m   [0mINSERT INTO "artists" ("created_at", "updated_at", "lname", "fname") VALUES('2012-08-17 19:52:36', '2012-08-17 19:52:36', 'Cassill', 'Kay')[0m
+Redirected to http://192.168.1.60:3000/artists/1
+Completed in 162ms (DB: 1) | 302 Found [http://192.168.1.60/artists]
+
+
+Processing ArtistsController#show (for 192.168.1.53 at 2012-08-17 19:52:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArtist Load (0.3ms)[0m   [0;1mSELECT * FROM "artists" WHERE ("artists"."id" = 1) [0m
+Rendering template within layouts/artists
+Rendering artists/show
+Completed in 79ms (View: 7, DB: 0) | 200 OK [http://192.168.1.60/artists/1]
+
+
+Processing ArtistsController#index (for 192.168.1.53 at 2012-08-17 19:52:41) [GET]
+  [4;35;1mArtist Load (0.6ms)[0m   [0mSELECT * FROM "artists" [0m
+Rendering template within layouts/artists
+Rendering artists/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://192.168.1.60/artists]
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArtists (20120817194943)
+Migrating to CreateArtifacts (20120817200200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE TABLE "artifacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "year" integer, "artist_id" integer, "medium_id" integer, "notes_id" integer, "tag_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120817200200')[0m
+Migrating to CreateArtifactNotes (20120817200255)
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "artifact_notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ts" datetime, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120817200255')[0m
+Migrating to CreateMedias (20120817200436)
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE TABLE "medias" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artifact_id" integer, "media_name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120817200436')[0m
+Migrating to CreateMediaAttributes (20120817200536)
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE TABLE "media_attributes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "media_id" integer, "attr_name" varchar(255), "attr_desc" text, "media_value" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120817200536')[0m
+Migrating to CreateDimensions (20120817200658)
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "dimensions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artifact_id" integer, "dim_type" varchar(255), "dim_value" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120817200658')[0m
+Migrating to CreatePrices (20120817200919)
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "prices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artifact_id" integer, "price_type" varchar(255), "price_description" text, "price_value" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120817200919')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("artifact_notes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("artifacts")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("artists")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("dimensions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("media_attributes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("medias")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("prices")[0m
+
+
+Processing ArtifactsController#index (for 192.168.1.53 at 2012-08-17 20:11:17) [GET]
+  [4;36;1mArtifact Load (1.8ms)[0m   [0;1mSELECT * FROM "artifacts" [0m
+Rendering template within layouts/artifacts
+Rendering artifacts/index
+Completed in 32ms (View: 24, DB: 2) | 200 OK [http://192.168.1.60/artifacts]
+
+
+Processing ArtifactsController#new (for 192.168.1.53 at 2012-08-17 20:11:20) [GET]
+Rendering template within layouts/artifacts
+Rendering artifacts/new
+Completed in 94ms (View: 87, DB: 0) | 200 OK [http://192.168.1.60/artifacts/new]
+
+
+Processing ArtifactsController#create (for 192.168.1.53 at 2012-08-17 20:12:35) [POST]
+  Parameters: {"artifact"=>{"tag_id"=>"", "title"=>"sample", "medium_id"=>"1", "notes_id"=>"", "year"=>"2013", "description"=>"this is a bogus sample for testing", "artist_id"=>"1"}, "commit"=>"Create", "authenticity_token"=>"f6hL2WHlyBndKik5AcoEEvijRJgnUUPbSewbpREVkjg="}
+  [4;35;1mArtifact Create (1.2ms)[0m   [0mINSERT INTO "artifacts" ("created_at", "title", "tag_id", "updated_at", "medium_id", "year", "notes_id", "description", "artist_id") VALUES('2012-08-17 20:12:35', 'sample', NULL, '2012-08-17 20:12:35', 1, 2013, NULL, 'this is a bogus sample for testing', 1)[0m
+Redirected to http://192.168.1.60:3000/artifacts/1
+Completed in 279ms (DB: 1) | 302 Found [http://192.168.1.60/artifacts]
+
+
+Processing ArtifactsController#show (for 192.168.1.53 at 2012-08-17 20:12:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArtifact Load (0.7ms)[0m   [0;1mSELECT * FROM "artifacts" WHERE ("artifacts"."id" = 1) [0m
+Rendering template within layouts/artifacts
+Rendering artifacts/show
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://192.168.1.60/artifacts/1]
+
+
+Processing ArtifactsController#index (for 192.168.1.53 at 2012-08-17 20:12:39) [GET]
+  [4;35;1mArtifact Load (0.8ms)[0m   [0mSELECT * FROM "artifacts" [0m
+Rendering template within layouts/artifacts
+Rendering artifacts/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://192.168.1.60/artifacts]
+
+
+Processing ArtifactsController#edit (for 192.168.1.53 at 2012-08-17 20:12:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArtifact Load (0.3ms)[0m   [0;1mSELECT * FROM "artifacts" WHERE ("artifacts"."id" = 1) [0m
+Rendering template within layouts/artifacts
+Rendering artifacts/edit
+Completed in 31ms (View: 25, DB: 0) | 200 OK [http://192.168.1.60/artifacts/1/edit]
+
+
+Processing ArtifactsController#update (for 192.168.1.53 at 2012-08-17 20:12:52) [PUT]
+  Parameters: {"artifact"=>{"tag_id"=>"", "title"=>"sample", "medium_id"=>"2", "notes_id"=>"", "year"=>"2013", "description"=>"this is a bogus sample for testing", "artist_id"=>"1"}, "commit"=>"Update", "authenticity_token"=>"f6hL2WHlyBndKik5AcoEEvijRJgnUUPbSewbpREVkjg=", "id"=>"1"}
+  [4;35;1mArtifact Load (0.3ms)[0m   [0mSELECT * FROM "artifacts" WHERE ("artifacts"."id" = 1) [0m
+  [4;36;1mArtifact Update (0.4ms)[0m   [0;1mUPDATE "artifacts" SET "medium_id" = 2, "updated_at" = '2012-08-17 20:12:52' WHERE "id" = 1[0m
+Redirected to http://192.168.1.60:3000/artifacts/1
+Completed in 125ms (DB: 1) | 302 Found [http://192.168.1.60/artifacts/1]
+
+
+Processing ArtifactsController#show (for 192.168.1.53 at 2012-08-17 20:12:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArtifact Load (0.0ms)[0m   [0mSELECT * FROM "artifacts" WHERE ("artifacts"."id" = 1) [0m
+Rendering template within layouts/artifacts
+Rendering artifacts/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://192.168.1.60/artifacts/1]
+
+
+Processing ArtifactsController#index (for 192.168.1.53 at 2012-08-17 20:12:54) [GET]
+  [4;36;1mArtifact Load (1.1ms)[0m   [0;1mSELECT * FROM "artifacts" [0m
+Rendering template within layouts/artifacts
+Rendering artifacts/index
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://192.168.1.60/artifacts]
+
+
+Processing ArtifactsController#destroy (for 192.168.1.53 at 2012-08-17 20:12:57) [DELETE]
+  Parameters: {"authenticity_token"=>"f6hL2WHlyBndKik5AcoEEvijRJgnUUPbSewbpREVkjg=", "id"=>"1"}
+  [4;35;1mArtifact Load (0.3ms)[0m   [0mSELECT * FROM "artifacts" WHERE ("artifacts"."id" = 1) [0m
+  [4;36;1mArtifact Destroy (0.2ms)[0m   [0;1mDELETE FROM "artifacts" WHERE "id" = 1[0m
+Redirected to http://192.168.1.60:3000/artifacts
+Completed in 40ms (DB: 1) | 302 Found [http://192.168.1.60/artifacts/1]
+
+
+Processing ArtifactsController#index (for 192.168.1.53 at 2012-08-17 20:12:58) [GET]
+  [4;35;1mArtifact Load (0.9ms)[0m   [0mSELECT * FROM "artifacts" [0m
+Rendering template within layouts/artifacts
+Rendering artifacts/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://192.168.1.60/artifacts]
+
+
+Processing ArtifactsController#new (for 192.168.1.53 at 2012-08-17 20:12:59) [GET]
+Rendering template within layouts/artifacts
+Rendering artifacts/new
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://192.168.1.60/artifacts/new]
+
+
+Processing ArtifactsController#create (for 192.168.1.53 at 2012-08-17 20:13:21) [POST]
+  Parameters: {"artifact"=>{"tag_id"=>"", "title"=>"sample", "medium_id"=>"1", "notes_id"=>"", "year"=>"2013", "description"=>"This is a bogus artifact for testing", "artist_id"=>"1"}, "commit"=>"Create", "authenticity_token"=>"f6hL2WHlyBndKik5AcoEEvijRJgnUUPbSewbpREVkjg="}
+  [4;36;1mArtifact Create (0.5ms)[0m   [0;1mINSERT INTO "artifacts" ("created_at", "title", "tag_id", "updated_at", "medium_id", "year", "notes_id", "description", "artist_id") VALUES('2012-08-17 20:13:21', 'sample', NULL, '2012-08-17 20:13:21', 1, 2013, NULL, 'This is a bogus artifact for testing', 1)[0m
+Redirected to http://192.168.1.60:3000/artifacts/2
+Completed in 24ms (DB: 1) | 302 Found [http://192.168.1.60/artifacts]
+
+
+Processing ArtifactsController#show (for 192.168.1.53 at 2012-08-17 20:13:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mArtifact Load (0.3ms)[0m   [0mSELECT * FROM "artifacts" WHERE ("artifacts"."id" = 2) [0m
+Rendering template within layouts/artifacts
+Rendering artifacts/show
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://192.168.1.60/artifacts/2]
+
+
+Processing ArtifactsController#index (for 192.168.1.53 at 2012-08-17 20:13:24) [GET]
+  [4;36;1mArtifact Load (0.8ms)[0m   [0;1mSELECT * FROM "artifacts" [0m
+Rendering template within layouts/artifacts
+Rendering artifacts/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://192.168.1.60/artifacts]
+
+
+Processing ApplicationController#index (for 192.168.1.53 at 2012-08-17 20:14:37) [GET]
+
+ActionController::RoutingError (No route matches "/media" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MediasController#index (for 192.168.1.53 at 2012-08-17 20:14:46) [GET]
+  [4;35;1mMedia Load (0.8ms)[0m   [0mSELECT * FROM "medias" [0m
+Rendering template within layouts/medias
+Rendering medias/index
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://192.168.1.60/medias]
+
+
+Processing MediasController#new (for 192.168.1.53 at 2012-08-17 20:14:51) [GET]
+Rendering template within layouts/medias
+Rendering medias/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://192.168.1.60/medias/new]
+
+
+Processing MediasController#create (for 192.168.1.53 at 2012-08-17 20:16:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"f6hL2WHlyBndKik5AcoEEvijRJgnUUPbSewbpREVkjg=", "media"=>{"media_name"=>"Oil on Canvas", "description"=>"Oil on Canvas Paintings", "artifact_id"=>"1"}}
+  [4;36;1mMedia Create (0.6ms)[0m   [0;1mINSERT INTO "medias" ("created_at", "updated_at", "media_name", "description", "artifact_id") VALUES('2012-08-17 20:16:29', '2012-08-17 20:16:29', 'Oil on Canvas', 'Oil on Canvas Paintings', 1)[0m
+Redirected to http://192.168.1.60:3000/medias/1
+Completed in 137ms (DB: 1) | 302 Found [http://192.168.1.60/medias]
+
+
+Processing MediasController#show (for 192.168.1.53 at 2012-08-17 20:16:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMedia Load (0.2ms)[0m   [0mSELECT * FROM "medias" WHERE ("medias"."id" = 1) [0m
+Rendering template within layouts/medias
+Rendering medias/show
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://192.168.1.60/medias/1]
+
+
+Processing MediasController#index (for 192.168.1.53 at 2012-08-17 20:16:33) [GET]
+  [4;36;1mMedia Load (0.8ms)[0m   [0;1mSELECT * FROM "medias" [0m
+Rendering template within layouts/medias
+Rendering medias/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://192.168.1.60/medias]

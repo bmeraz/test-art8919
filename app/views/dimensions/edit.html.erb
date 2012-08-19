@@ -1,0 +1,24 @@
+<h1>Editing dimension</h1>
+
+<% form_for(@dimension) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :artifact_id %><br />
+    <%= f.text_field :artifact_id %>
+  </p>
+  <p>
+    <%= f.label :dim_type %><br />
+    <%= f.text_field :dim_type %>
+  </p>
+  <p>
+    <%= f.label :dim_value %><br />
+    <%= f.text_field :dim_value %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @dimension %> |
+<%= link_to 'Back', dimensions_path %>

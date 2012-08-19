@@ -1,0 +1,26 @@
+<h1>Listing prices</h1>
+
+<table>
+  <tr>
+    <th>Artifact</th>
+    <th>Price type</th>
+    <th>Price description</th>
+    <th>Price value</th>
+  </tr>
+
+<% @prices.each do |price| %>
+  <tr>
+    <td><%=h price.artifact_id %></td>
+    <td><%=h price.price_type %></td>
+    <td><%=h price.price_description %></td>
+    <td><%=h price.price_value %></td>
+    <td><%= link_to 'Show', price %></td>
+    <td><%= link_to 'Edit', edit_price_path(price) %></td>
+    <td><%= link_to 'Destroy', price, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New price', new_price_path %>

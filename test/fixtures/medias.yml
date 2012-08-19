@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  artifact_id: 1
+  media_name: MyString
+  description: MyText
+
+two:
+  artifact_id: 1
+  media_name: MyString
+  description: MyText

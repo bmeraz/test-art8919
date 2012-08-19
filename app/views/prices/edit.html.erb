@@ -1,0 +1,28 @@
+<h1>Editing price</h1>
+
+<% form_for(@price) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :artifact_id %><br />
+    <%= f.text_field :artifact_id %>
+  </p>
+  <p>
+    <%= f.label :price_type %><br />
+    <%= f.text_field :price_type %>
+  </p>
+  <p>
+    <%= f.label :price_description %><br />
+    <%= f.text_area :price_description %>
+  </p>
+  <p>
+    <%= f.label :price_value %><br />
+    <%= f.text_field :price_value %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @price %> |
+<%= link_to 'Back', prices_path %>

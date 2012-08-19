@@ -1,0 +1,27 @@
+<h1>New media_attribute</h1>
+
+<% form_for(@media_attribute) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :media_id %><br />
+    <%= f.text_field :media_id %>
+  </p>
+  <p>
+    <%= f.label :attr_name %><br />
+    <%= f.text_field :attr_name %>
+  </p>
+  <p>
+    <%= f.label :attr_desc %><br />
+    <%= f.text_area :attr_desc %>
+  </p>
+  <p>
+    <%= f.label :media_value %><br />
+    <%= f.text_field :media_value %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', media_attributes_path %>

@@ -1,0 +1,38 @@
+<p>
+  <b>Title:</b>
+  <%=h @artifact.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @artifact.description %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%=h @artifact.year %>
+</p>
+
+<p>
+  <b>Artist:</b>
+  <%=h @artifact.artist_id %>
+</p>
+
+<p>
+  <b>Medium:</b>
+  <%=h @artifact.medium_id %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @artifact.notes_id %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%=h @artifact.tag_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_artifact_path(@artifact) %> |
+<%= link_to 'Back', artifacts_path %>

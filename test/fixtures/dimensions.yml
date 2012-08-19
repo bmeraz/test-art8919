@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  artifact_id: 1
+  dim_type: MyString
+  dim_value: MyString
+
+two:
+  artifact_id: 1
+  dim_type: MyString
+  dim_value: MyString

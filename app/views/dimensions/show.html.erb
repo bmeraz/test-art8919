@@ -1,0 +1,18 @@
+<p>
+  <b>Artifact:</b>
+  <%=h @dimension.artifact_id %>
+</p>
+
+<p>
+  <b>Dim type:</b>
+  <%=h @dimension.dim_type %>
+</p>
+
+<p>
+  <b>Dim value:</b>
+  <%=h @dimension.dim_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_dimension_path(@dimension) %> |
+<%= link_to 'Back', dimensions_path %>
